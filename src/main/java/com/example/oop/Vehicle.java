@@ -1,29 +1,25 @@
 package com.example.oop;
 
-public class Vehicle {
+
+public class Vehicle implements Servicable, Driveable {
 
     private int length;
     private int width;
     private Engine engine;
 
+    // composition
+    // has-a
     public Vehicle(Engine engine){
         this.engine = engine;
     }
 
-    public Vehicle(int width, int length, boolean hasEngine){
+    public Vehicle(int width, int length, boolean hasEngine) {
         this.length = length;
         this.width = width;
 
-        if(hasEngine){
+        if(hasEngine) {
             this.engine = new Engine();
         }
-    }
-
-    public void drive(){
-        if(this.engine != null){
-            startEngine();
-        }
-        turnWheels();
     }
 
     private void startEngine(){
@@ -34,5 +30,32 @@ public class Vehicle {
         // turns the wheels of the car
     }
 
+    public void drive(){
 
+    }
+
+
+    @Override
+    public void steer() {
+
+    }
+
+    @Override
+    public void accelerate() {
+
+    }
+
+    public void brake(){
+
+    }
+
+    @Override
+    public void replaceTires() {
+
+    }
+
+    @Override
+    public void changeOil() {
+
+    }
 }

@@ -4,7 +4,7 @@ public class Engine {
     private int engineVolume;
     private boolean isStarted;
 
-    public String type = "Ferrari engine";
+    public String type;
 
     public boolean getIsStarted(){
         return this.isStarted;
@@ -12,5 +12,9 @@ public class Engine {
 
     public void start(){
         this.isStarted = true;
+    }
+
+    public void stop(){
+        this.isStarted = false;
     }
 }
